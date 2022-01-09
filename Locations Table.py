@@ -1,17 +1,17 @@
 import mysql.connector
 
-mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR")
+mydb=mysql.connector.connect(host="localhost",user="root",passwd="")
 mycursor=mydb.cursor()
 mycursor.execute(''' create database if not exists hypertrains ''')
 mydb.close()
 
-mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hyperTrains")
+mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hyperTrains")
 mycursor=mydb.cursor()
 mycursor.execute("create table locations (fr varchar(20),"
                      "reach varchar(20),TravelTime varchar(3),R_First varchar(5),R_Premium varchar(5),R_Standard varchar(5),First varchar(5),Premium varchar(5),Standard varchar(5))")
 mydb.close()
 
-mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hyperTrains")
+mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hyperTrains")
 mycursor=mydb.cursor()
 com = """INSERT INTO locations (fr,reach,TravelTime,R_First,R_Premium,R_Standard,First,Premium,Standard)
                             VALUES (%s, %s, %s, %s,%s,%s,%s,%s,%s)"""

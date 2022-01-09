@@ -5,7 +5,7 @@ from CustomerUpdate import *
 from tabulate import tabulate
 def menu_customer(username):
     while True:
-        mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="HyperTrains")
+        mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="HyperTrains")
         mycursor=mydb.cursor()
         mycursor.execute("select Idno from customer where Name='{}'".format(username))
         result=mycursor.fetchall()

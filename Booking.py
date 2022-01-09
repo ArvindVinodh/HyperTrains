@@ -2,7 +2,7 @@ import mysql.connector
 from tabulate import tabulate
 
 def storing_return(fr,reach,FrDate,BackDate,TravelTime,Class_,AmountPaid,NumPeople,username):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     query="update customer set fr=%s,reach=%s,FrDate=%s,FrTime=%s,BackDate=%s,R_FrTime=%s,TravelTime=%s,Class=%s,AmountPaid=%s,NumPeople=%s where Name=%s"
@@ -14,7 +14,7 @@ def storing_return(fr,reach,FrDate,BackDate,TravelTime,Class_,AmountPaid,NumPeop
     print("Thank you")
     
 def storing_out(fr,reach,FrDate,TravelTime,Class_,AmountPaid,NumPeople,username):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     query="update customer set fr=%s,reach=%s,FrDate=%s,FrTime=%s,TravelTime=%s,Class=%s,AmountPaid=%s,NumPeople=%s where Name=%s"
@@ -70,7 +70,7 @@ def class_out(c3,FC,HP,S):
     return Class_,AmountPaid
 
 def View_Booking(username):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     query="select fr,reach,FrDate,FrTime,BackDate,R_FrTime,TravelTime,Class,AmountPaid,NumPeople from customer where Name=%s"
     mycursor.execute(query,(username,))
@@ -134,7 +134,7 @@ def Book(username):
             c5c=input("Input Date: ")
             BackDate=c5a+"-"+c5b+"-"+c5c
         print()
-        mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+        mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
         mycursor=mydb.cursor()
         if c5 in "Yy":
             query="select TravelTime,R_First,R_Premium,R_Standard from locations where fr=%s and reach=%s"

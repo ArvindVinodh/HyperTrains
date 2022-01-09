@@ -1,10 +1,10 @@
 import mysql.connector
-mydb = mysql.connector.connect(host="localhost", user="root", passwd="EmiratesA380AR")
+mydb = mysql.connector.connect(host="localhost", user="root", passwd="")
 mycursor = mydb.cursor()
 mycursor.execute(''' create database if not exists hypertrains ''')
 mydb.close()
 
-mydb = mysql.connector.connect(host="localhost", user="root", passwd="EmiratesA380AR", database="hypertrains")
+mydb = mysql.connector.connect(host="localhost", user="root", passwd="", database="hypertrains")
 mycursor = mydb.cursor()
 
 mycursor.execute("create table customer (Idno varchar(5) PRIMARY KEY,"

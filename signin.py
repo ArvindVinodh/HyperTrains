@@ -7,7 +7,7 @@ def SignIn():
     while True:
         print("\t\t==================================================")
         print("\t\t*************Hyper Trains Sign In**************")
-        mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+        mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
         mycursor=mydb.cursor()
         choice_=input("Do you wish to exit?(y or n): ")
         if choice_ in "Yy":

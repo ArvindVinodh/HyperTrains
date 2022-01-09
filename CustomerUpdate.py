@@ -2,7 +2,7 @@ import mysql.connector
 from tabulate import tabulate
 #function to delete a customer account
 def DeleteAccount(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hyperTrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hyperTrains")
     mycursor=mydb.cursor()
     com="select Idno,Name,Pwd from customer where Idno={}".format(IDno)
     mycursor.execute(com)
@@ -18,7 +18,7 @@ def DeleteAccount(IDno):
         return
 #function to delete a booking
 def DeleteBooking(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hyperTrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hyperTrains")
     mycursor=mydb.cursor()
     
     com="select Name,Pwd from customer where Idno={}".format(IDno)
@@ -49,7 +49,7 @@ def DeleteBooking(IDno):
 
 #function to modify the departure location of customer
 def Modify_FromLocation(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     print("Current Booking Details:")
@@ -113,7 +113,7 @@ def Modify_FromLocation(IDno):
         
 #function to modify the arrival location of customer     
 def Modify_ReachLocation(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     print("Current Booking Details:")
@@ -173,7 +173,7 @@ def Modify_ReachLocation(IDno):
 
 #function to modify from date of customer
 def Modify_FromDate(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     print("Current Booking Details:")
@@ -201,7 +201,7 @@ def Modify_FromDate(IDno):
     
 #function to modify return date of customer
 def Modify_ReturnDate(IDno):
-    mydb=mysql.connector.connect(host="localhost",user="root",passwd="EmiratesA380AR",database="hypertrains")
+    mydb=mysql.connector.connect(host="localhost",user="root",passwd="",database="hypertrains")
     mycursor=mydb.cursor()
     print()
     print("Current Booking Details:")
